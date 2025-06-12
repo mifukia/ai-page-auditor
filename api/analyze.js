@@ -1,7 +1,7 @@
 import { OpenAI } from 'openai';
 
 // Vercelは.envを自動で読み込む
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || 'sk-xxxxxxx仮キー' });
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
