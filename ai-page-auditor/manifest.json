@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "AI Page Auditor",
+  "version": "1.0",
+  "description": "社内ページをAIで解析し、改善点を提案します",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery.min.js", "content.js"]
+    }
+  ]
+} 
